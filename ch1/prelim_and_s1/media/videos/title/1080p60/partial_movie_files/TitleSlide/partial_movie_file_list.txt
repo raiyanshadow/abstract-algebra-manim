@@ -1,0 +1,9 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/tasee/Desktop/code/abstract-algebra/ch1/prelim_and_s1/media/videos/title/1080p60/partial_movie_files/TitleSlide/3717214498_3833186147_223132457.mp4'
+file 'file:C:/Users/tasee/Desktop/code/abstract-algebra/ch1/prelim_and_s1/media/videos/title/1080p60/partial_movie_files/TitleSlide/1598692106_4071516364_264776007.mp4'
+file 'file:C:/Users/tasee/Desktop/code/abstract-algebra/ch1/prelim_and_s1/media/videos/title/1080p60/partial_movie_files/TitleSlide/1598692106_2020664253_3258631988.mp4'
+file 'file:C:/Users/tasee/Desktop/code/abstract-algebra/ch1/prelim_and_s1/media/videos/title/1080p60/partial_movie_files/TitleSlide/1598692106_4071516364_3983905611.mp4'
+file 'file:C:/Users/tasee/Desktop/code/abstract-algebra/ch1/prelim_and_s1/media/videos/title/1080p60/partial_movie_files/TitleSlide/1598692106_1207728004_837638103.mp4'
+file 'file:C:/Users/tasee/Desktop/code/abstract-algebra/ch1/prelim_and_s1/media/videos/title/1080p60/partial_movie_files/TitleSlide/1598692106_4071516364_1498913563.mp4'
+file 'file:C:/Users/tasee/Desktop/code/abstract-algebra/ch1/prelim_and_s1/media/videos/title/1080p60/partial_movie_files/TitleSlide/1598692106_1443418306_509035119.mp4'
+file 'file:C:/Users/tasee/Desktop/code/abstract-algebra/ch1/prelim_and_s1/media/videos/title/1080p60/partial_movie_files/TitleSlide/1598692106_2341082278_3813297065.mp4'
