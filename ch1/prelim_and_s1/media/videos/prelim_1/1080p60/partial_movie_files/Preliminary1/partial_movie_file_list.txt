@@ -1,6 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:C:/Users/tasee/Desktop/code/abstract-algebra/ch1/prelim_and_s1/media/videos/prelim_1/1080p60/partial_movie_files/Preliminary1/3717214498_775234502_223132457.mp4'
-file 'file:C:/Users/tasee/Desktop/code/abstract-algebra/ch1/prelim_and_s1/media/videos/prelim_1/1080p60/partial_movie_files/Preliminary1/1598692106_3771474033_555168072.mp4'
-file 'file:C:/Users/tasee/Desktop/code/abstract-algebra/ch1/prelim_and_s1/media/videos/prelim_1/1080p60/partial_movie_files/Preliminary1/1598692106_4247107814_1790356676.mp4'
-file 'file:C:/Users/tasee/Desktop/code/abstract-algebra/ch1/prelim_and_s1/media/videos/prelim_1/1080p60/partial_movie_files/Preliminary1/1598692106_3258930231_1439039708.mp4'
-file 'file:C:/Users/tasee/Desktop/code/abstract-algebra/ch1/prelim_and_s1/media/videos/prelim_1/1080p60/partial_movie_files/Preliminary1/1598692106_4071516364_2965594350.mp4'

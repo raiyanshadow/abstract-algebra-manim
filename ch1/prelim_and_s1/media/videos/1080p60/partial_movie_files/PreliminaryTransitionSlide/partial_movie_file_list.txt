@@ -1,3 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:C:/Users/tasee/Desktop/code/abstract-algebra/ch1/prelim_and_s1/media/videos/1080p60/partial_movie_files/PreliminaryTransitionSlide/3544663784_3676613494_223132457.mp4'
-file 'file:C:/Users/tasee/Desktop/code/abstract-algebra/ch1/prelim_and_s1/media/videos/1080p60/partial_movie_files/PreliminaryTransitionSlide/260329756_4071516364_469789605.mp4'
