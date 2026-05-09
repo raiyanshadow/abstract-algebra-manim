@@ -209,7 +209,11 @@ class Prelim22(Scene):
 
         clear_stage(keep=(title, divider))
 
-        larger_visual_title = fit_tex("No maximal element means extension", 36, color=YELLOW)
+        larger_visual_title = fit_math(
+            r"\text{For each }\Omega\in A,\text{ choose }\Omega'\in A\text{ with }\Omega<\Omega'",
+            32,
+            color=YELLOW,
+        )
         below(larger_visual_title, divider, 0.45)
         omega = subset_box(2.5, 1.55, BLUE_B, "\\Omega").shift(LEFT * 2.3 + DOWN * 0.1)
         omega_prime = subset_box(3.55, 2.25, YELLOW, "\\Omega'").shift(RIGHT * 2.3 + DOWN * 0.1)
@@ -267,7 +271,11 @@ class Prelim22(Scene):
 
         clear_stage(keep=(title, divider))
 
-        fixed_visual_title = fit_tex("Fixed point versus strict extension", 36, color=YELLOW)
+        fixed_visual_title = fit_math(
+            r"\text{But Bourbaki-Witt gives }f(\Omega_0)=\Omega_0",
+            36,
+            color=YELLOW,
+        )
         below(fixed_visual_title, divider, 0.45)
         omega0 = subset_box(2.9, 1.85, BLUE_B, "\\Omega_0").shift(LEFT * 2.6)
         same_omega0 = subset_box(2.9, 1.85, BLUE_B, "f(\\Omega_0)").shift(RIGHT * 2.6)

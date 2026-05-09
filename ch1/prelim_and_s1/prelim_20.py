@@ -135,7 +135,7 @@ class Prelim20(Scene):
 
         clear_stage(keep=(title, divider))
 
-        closed_title = fit_tex("First: closure under f", 38, color=YELLOW)
+        closed_title = fit_math(r"\text{First: show }f(M_c)\subseteq M_c", 38, color=YELLOW)
         below(closed_title, divider, 0.45)
         let_x = fit_math(r"\text{Let }x\in M_c.", 44)
         below(let_x, closed_title, 0.45)
@@ -170,7 +170,7 @@ class Prelim20(Scene):
 
         clear_stage(keep=(title, divider))
 
-        closure_visual_title = fit_tex("Closure picture", 38, color=YELLOW)
+        closure_visual_title = fit_math(r"\text{Picture for }f(M_c)\subseteq M_c", 38, color=YELLOW)
         below(closure_visual_title, divider, 0.45)
         closure_pic = mc_picture(scale=0.86).shift(RIGHT * 2.7 + DOWN * 0.15)
         closure_pic[7].set_opacity(0)
@@ -190,11 +190,11 @@ class Prelim20(Scene):
         fx_high_label = MathTex("f(x)", font_size=24, color=GREEN_B).next_to(fx_high, RIGHT, buff=0.3)
         fx_high_label.shift(UP * 0.18)
         visual_note = fit_math(
-            r"x\in M_c\Rightarrow f(x)\text{ lands in one of the same two pieces.}",
+            r"\text{For } x\in M_c\Rightarrow f(x)\text{ lands in one of the same two pieces.}",
             34,
             color=YELLOW,
         ).shift(LEFT * 2.75 + DOWN * 0.2)
-        visual_note.scale_to_fit_width(4.4)
+        visual_note.scale_to_fit_width(6.6)
         visual_group = VGroup(
             closure_pic, x_low, fx_low, x_high, fx_high,
             low_arrow, high_arrow, low_label, fx_low_label, high_label, fx_high_label,
