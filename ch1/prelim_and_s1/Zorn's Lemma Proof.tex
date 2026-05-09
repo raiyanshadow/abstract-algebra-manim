@@ -1,0 +1,106 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting image
+\usepackage{amsmath, amsthm}
+\usepackage{dirtytalk}
+\usepackage{amssymb}
+\usepackage{relsize}
+\usepackage{wrapfig}
+\usepackage{tikz}
+\usetikzlibrary{positioning,fit,backgrounds}
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstdefinestyle{pythonstyle}{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!60!black},
+    stringstyle=\color{black},
+    numbers=left,
+    numberstyle=\tiny\color{blue},
+    stepnumber=1,
+    numbersep=8pt,
+    frame=single,
+    rulecolor=\color{black},
+    showstringspaces=false,
+    tabsize=4,
+    breaklines=false,
+    captionpos=b
+}
+
+\lstset{style=pythonstyle}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+A set $A$ is strictly inductively ordered iff every nonempty totally ordered subset has a least upper bound.
+Assuem that this set $A$ is also nonempty, and partially ordered by $\leq$.
+
+A map $f: A \to A$ is increasing if $\forall x \in A, x \leq f(x)$.
+
+Let $a \in A$ and $B \subseteq A$ such that $a \in B$. $B$ is an admissible set if $f(B) \subseteq B$ and for all non-empty totally ordered subsets $T$ in $A$ lies in $B$.
+This implies that $B$ must also be strictly inductively ordered by definition.
+
+\textbf{Bourbaki-Witt Theorem --} If $A$ is a nonempty strictly inductively ordered and partially ordered set with $f: A \to A$ an increasing mapping, then $\exists x_0 \in A$ such that $f(x_0) = x_0$.
+
+\textit{Proof.} Let $M$ be the intersection of all admissible subsets of $A$, where for the least upper bound $a \in A$, $a \in M$. 
+Thus, $M$ is nonempty. Now let $x \in M$, so then $f(x) \in M$. Thus, $f(M) \subseteq M$. 
+
+Let $T$ be a totally ordered subset  of $M$ that is nonempty. Note that as $f(a) \in M$ then $f \circ f(a) \in M, \dots, f^{(n)}(a) \in M$.
+
+Let $c$ be an extreme point of $M$, meaning that when $x \in M$ and $x \le c$, then $f(x) \leq c$. Let $M_c = \{x \in M : x \leq c \: \text{or} \: f(c) \leq x\}$.
+
+\textbf{Lemma A --} $M_c = M$ for every extreme point $c$ of $M$.
+
+This is identical to proving that $M_c$ is an admissible set, which we shall do.
+
+\textit{Proof.} Let $x \in M_c$, and if $x < c$ and $f(x) \leq c$, then $f(x) \in M_c$. If $x = c$, $f(x) = f(c) \in M_c$.
+
+If $f(c) \leq c$, then $f(c) \leq x \leq f(x)$ and so $f(M_c) \subseteq M_c$.
+
+Let $T$ be a nonempty totally ordered subset of $M_c$, and let $b$ be the least upper bound of $T$ in $M$. If $\forall x \in T, x \leq c$, then $b \leq c$ and $b \in M$.
+
+If $\exists x \in T$ such that $f(c) \leq x$, then $f(c) \leq x \leq b$, so again $b \in M_c$. Thus, $M_c$ is an admissible set, and so $M_c = M$. $\blacksquare$
+
+\textbf{Lemma B --} Every element of $M$ is an extreme point.
+
+\textit{Proof.} Let $E$ be the set of all extreme points of $M$. $E$ cannot be empty, since $a \in E$.
+
+Let $c \in E$ and $x \in M$ such that $x < f(c)$. By Lemma A, $M = M_c$, so $x < c$ or $x = c$. $f(c) > x$ since $x < f(c)$. 
+
+If $x < c$, then $f(x) \leq c \leq f(c)$. If $x = c$, then $f(x) = f(c)$, so $f(E) \subseteq E$.
+
+Let $T$ be a nonempty totally ordered subset of $E$. Let $b$ be the least upper bound of $T$ in $M$.
+
+Let $x \in M$ and assume $x < b$. Suppose $\exists c \in T$ such that $f(c) \leq x$, then $c \leq f(c) \leq x$ implies that $x$ is an upper bound of T, so $b \leq x$, but this is not possible as $x < b$.
+
+From Lemma A, $x \leq c$ for some $c \in T$. If $x < c$, then $f(x) \leq c \leq b$, and if $x = c$, then $c = x < b$. So, $f(x) \leq b$. Thus, $b \in E$ and $E$ is admissible, so $E = M$. $\blacksquare$
+
+Let $x, y \in M$, then by Lemma B, $x$ is an extreme point of $M$, and suppose $y \in M_x$. This means that $y \leq x$ or $x \leq f(x) \leq y$, so $M$ is totally ordered.
+
+Then, there must exist a least upper bound $b \in M$ so that $b \leq f(b) \leq b$, so $f(b) = b$. $\blacksquare$
+
+\textbf{Zorn's Lemma --} If $S$ is a nonempty inductively ordered and partially ordered set, then there exists a maximal element in $S$.
+
+\textit{Proof.} Let $A$ be the set of all nonempty totally ordered subsets of $S$. $A$ is nonempty since $A$ contains subsets of $S$ with at least one element.
+
+Let $X, Y \in A$ and let $X \leq Y$ means that $X \subseteq Y$. Then $A$ is partially odered by $\leq$ and is strictly inductively ordered since every nonempty totally ordered subset of $A$ has a least upper bound, which is the union of all the sets in the subset.
+
+Let $T = \{X_i\}_{i \in I}$ be a totally ordered subset of $A$, and let $Z = \bigcup_{i \in I}{X_i}$, which must be totally ordered since for $x, y \in Z$ then $x \in X_i$ and $y \in X_j$ for some $i, j \in I$, and as $X_j$ is totally ordered, then either $x \leq y$ or $y \leq x$.
+
+Suppose $A$ does not have a maximal element. Then $\forall \Omega \in A$, $\exists \Omega' \in A$ such that $\Omega < \Omega'$. Let $f: A \to A$ be defined by $f(\Omega) = \Omega'$ for all $\Omega \in A$.
+
+By the Bourbaki-Witt Theorem, $\exists \Omega_0 \in A$ such that $f(\Omega_0) = \Omega_0$, which is a contradiction.
+
+Let $X_0$ be the maximal element of $A$.
+
+Let $m$ be an upper bound of $X_0$, then $m$ is the desired maximal element of $S$. If $x \in S$ and $m \leq x$, note then that $X_0 \cup \{x\}$ is totally ordered, which contradicts the maximality of $X_0$. Thus, $m$ is the maximal element of $S$. $\blacksquare$
+
+\end{document}
