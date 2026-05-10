@@ -3,7 +3,7 @@ from manim import *
 
 class Prelim17(Scene):
     def construct(self):
-        self.camera.background_color = DARK_GRAY
+        self.camera.background_color = "#1e1e2e"
         text_width = 10.4
 
         def fit_math(src: str, size: int, color=None):
