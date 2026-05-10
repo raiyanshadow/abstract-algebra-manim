@@ -3,7 +3,7 @@ from manim import *
 
 class Prelim14(Scene):
     def construct(self):
-        self.camera.background_color = DARK_GRAY
+        self.camera.background_color = "#1e1e2e"
 
         title = Text("Equivalence Classes and Well-Defined Maps", font_size=46)
         title.to_edge(UP)

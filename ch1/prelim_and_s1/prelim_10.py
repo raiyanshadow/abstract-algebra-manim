@@ -3,7 +3,7 @@ from manim import *
 
 class Prelim10(Scene):
     def construct(self):
-        self.camera.background_color = DARK_GRAY
+        self.camera.background_color = "#1e1e2e"
 
         title = Text("Inverse Image, Image, and Restriction", font_size=44)
         title.to_edge(UP)

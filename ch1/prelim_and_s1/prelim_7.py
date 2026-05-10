@@ -4,7 +4,7 @@ import numpy as np
 
 class Prelim7(Scene):
     def construct(self):
-        self.camera.background_color = DARK_GRAY
+        self.camera.background_color = "#1e1e2e"
 
         title = Tex("Subsets").to_edge(UP)
         self.play(Write(title))

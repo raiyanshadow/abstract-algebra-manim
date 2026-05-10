@@ -3,7 +3,7 @@ from manim.utils.rate_functions import smooth
 
 class Preliminary1(Scene):
     def construct(self):
-        self.camera.background_color = DARK_GRAY
+        self.camera.background_color = "#1e1e2e"
         setA = MathTex("A", font_size=96).to_edge(UP).move_to(LEFT)
         setB = MathTex("B", font_size=96).next_to(setA, RIGHT, buff=1)
 
@@ -20,3 +20,4 @@ class Preliminary1(Scene):
         )
 
         self.wait(1)
+

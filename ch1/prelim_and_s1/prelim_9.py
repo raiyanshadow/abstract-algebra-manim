@@ -32,7 +32,7 @@ class Prelim9(Scene):
         return panel, arrows
 
     def construct(self):
-        self.camera.background_color = DARK_GRAY
+        self.camera.background_color = "#1e1e2e"
         title = Text("Mappings Between Sets", font_size=52)
         title.to_edge(UP)
 

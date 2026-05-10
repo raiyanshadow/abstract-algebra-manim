@@ -3,7 +3,7 @@ from manim import *
 
 class Prelim8(Scene):
     def construct(self):
-        self.camera.background_color = DARK_GRAY
+        self.camera.background_color = "#1e1e2e"
         title = Text("Cardinality of a Set", font_size=56)
         title.to_edge(UP)
 

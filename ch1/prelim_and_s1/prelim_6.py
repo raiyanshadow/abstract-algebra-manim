@@ -4,7 +4,7 @@ import numpy as np
 
 class Preliminary6(ThreeDScene):
     def construct(self):
-        self.camera.background_color = DARK_GRAY
+        self.camera.background_color = "#1e1e2e"
 
         title = Tex(r"Building Dimensions via Cartesian Products", font_size=42)
         subtitle = MathTex(r"[0,1] \;\to\; [0,1]^2 \;\to\; [0,1]^3")

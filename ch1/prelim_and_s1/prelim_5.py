@@ -3,7 +3,7 @@ from manim.utils.rate_functions import smooth
 
 class Preliminary5(Scene):
     def construct(self):
-        self.camera.background_color = DARK_GRAY
+        self.camera.background_color = "#1e1e2e"
         text1 = MathTex(r"\{A_i\}_{i \in I}", font_size=96).move_to(UP*3)
 
         self.play(Write(text1), run_time=1)
